@@ -29,9 +29,10 @@ function gerarFaturaStr (fatura, pecas) {
           break;
         default:
             throw new Error(`Peça desconhecia: ${peca.tipo}`);
+        
         }
+        return total;
       }
-
       let total = calcularTotalApresentacao(apre, peca);
       // créditos para próximas contratações
       creditos += Math.max(apre.audiencia - 30, 0);
